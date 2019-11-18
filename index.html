@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Maquetació</title>
+    <style type="text/css">
+        :root{
+            --titular:2vw; 
+            --cos:1em;
+            --cfonts:aqua;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 14px;
+        }
+        img{
+            width: 100%;
+        }
+        h1{
+            font-size: var(--titular);
+        }
+        header{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+        section{
+            width: 50%;
+            height: 100vh;
+        }
+         header section:first-child{
+            background: blue;
+            position: relative;
+        }
+        header section:first-child img{
+            height: 100%;
+            object-fit: cover; 
+            object-position: center center;
+        }
+        header section:last-child{
+            background:red;
+            position: relative;
+        }
+        header section:last-child img{
+            height: 100%;
+            object-fit: cover; 
+            object-position: center center;
+        }
+        h1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 4vw;
+            font-family: "Impact", "Charcoal", sans-serif;
+            color: white;
+        }
+        main{
+            clear: both;
+            position: relative;
+            width: 600px;
+            margin: auto;
+            font-family: "futura" ; 
+        }
+        main>p{
+            position: relative;
+            line-height: 1.4em;
+            padding: 5em 0;
+            color: var(--cfonts);
+            column-count: 2;
+            column-gap: 30px;
+            column-rule:1px solid var(--cfonts);
+            text-align: justify;
+            hyphens: auto;
+        }
+        article{
+            padding: 0 4em;
+            color: gray;
+        }
+        article p{
+            margin: 0 0 1.2em 0;
+            text-align: justify;
+            hyphens: auto;
+        }
+        article p:first-child::first-letter{
+            color: var(--cfonts);
+            font-size: 8em;
+            float: left;
+            line-height: 6rem;
+            padding-right: 1rem;
+            padding-left: 0.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .cercle{
+            background: var (--cfonts);
+            border-radius: 50%;
+            shape-outside: circle(50%) border-box;
+            float: left;
+            max-width: 20em;
+            margin-left: -8em;
+            shape-margin: 1em;
+         }
+       .cercle img{
+            mix-blend-mode: hard-light;
+            border-radius: 50%;
+            shape-outside: circle(50%)
+        }
+        .hexagon{
+            background: var(--cfonts);
+            float: right;
+            max-width: 18em;
+            margin-right: -10em;
+            shape-margin: 2em;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            shape-outside: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)border-box;    
+        }
+        .hexagon img{
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            shape-outside: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        @media (max-width:600px){
+            body{
+                font-size: 12px;
+                background: blue;
+            }
+        }
+    </style>   
+    </head>
+    <body>
+        <header>
+            <section>
+                <img src="img/carson.jpg" alt="">
+                <h1>David Carson<br>Ray Gun</h1>
+            </section> 
+            <section>
+            <img src="img/gestner.jpg" alt="">
+            <h1>Karl Gestner<br>Neocid</h1>
+            </section>
+        </header>
+        <main><p>Así es David Ray Carson, un norteamericano nacido el 8 de septiembre de 1954, en la ciudad de Corpus Christi, estado de Texas. De aspecto tranquilo, pero de alma rebelde, paso muchos años de su infancia en su natal Texas, luego asistió a la Universidad Estatal de San Diego, así como Oregon College of Art de Comercio. El primer contacto real de Carson con el diseño gráfico fue realizado en 1980 en la Universidad de Arizona en un curso de dos semanas de gráficos, impartido por Boelts Jackson. Más tarde, en 1983, Carson fue la enseñanza de la Sociología en la escuela secundaria del mar de California, donde además cultivó su pasión por el surf. Carson no tenía noción del diseño como tal, hasta que surgió un viaje a Suiza, donde asistió a un taller de tres semanas en el diseño gráfico como parte de su carrera. Aquí es donde conoció a su primera gran influencia, que también pasó a ser el profesor de este curso, Hans-Rudolf Lutz.</p>
+                <article>
+                <p>En la práctica, Carson tiene una Licenciatura en Sociología.Durante el período de 1982-1987, Carson trabajó como profesor en Torrey Pines High School en San Diego, California. En 1983, con sus primeras incursiones en el mundo del diseño, Carson comenzó a experimentar y se encontró inmerso en la cultura artística y bohemia del sur de California.</p>
+                <img src="img/carson_nom.png">
+                <p>A fines de 1980 había desarrollado su estilo característico, el uso de “sucio” de tipo y no convencionales técnicas fotográficas. Fue por esto que fue duramente criticado por los “catedraticos” del diseño, el diseño reglamentado o de “la vieja escuela” del diseño, calificando su trabajo como un absurdo, ilegíble y sin sentido de la coherencia. </p>
+                <div class="cercle">
+                    <img src="img/carson_cara.png">
+                </div>
+                <p>Si llevaramos el diseño a un hambito religioso, lo habrian quemado en la hoguera por sacrilego. Pero su trabajo sería apreciado y valorado mas temprano que tarde.Si llevaramos el diseño a un hambito religioso, lo habrian quemado en la hoguera por sacrilego. Pero su trabajo sería apreciado y valorado mas temprano que tarde.Si llevaramos el diseño a un hambito religioso, lo habrian quemado en la hoguera por sacrilego. Pero su trabajo sería apreciado y valorado mas temprano que tarde.Si llevaramos el diseño a un hambito religioso, lo habrian quemado en la hoguera por sacrilego. Pero su trabajo sería apreciado y valorado mas temprano que tarde.Si llevaramos el diseño a un hambito religioso, lo habrian quemado en la hoguera por sacrilego. Pero su trabajo sería apreciado y valorado mas temprano que tarde.Si llevaramos el diseño a un hambito religioso, lo habrian quemado en la hoguera por sacrilego. Pero su trabajo sería apreciado y valorado mas temprano que tarde.</p>
+                <div class="hexagon">
+                    <img src="img/carson_design.png">
+                </div>
+                <p>Así es David Ray Carson, un norteamericano nacido el 8 de septiembre de 1954, en la ciudad de Corpus Christi, estado de Texas. De aspecto tranquilo, pero de alma rebelde, paso muchos años de su infancia en su natal Texas, luego asistió a la Universidad Estatal de San Diego, así como Oregon College of Art de Comercio. El primer contacto real de Carson con el diseño gráfico fue realizado en 1980 en la Universidad de Arizona en un curso de dos semanas de gráficos, impartido por Boelts Jackson. Más tarde, en 1983, Carson fue la enseñanza de la Sociología en la escuela secundaria del mar de California, donde además cultivó su pasión por el surf. Carson no tenía noción del diseño como tal, hasta que surgió un viaje a Suiza, donde asistió a un taller de tres semanas en el diseño gráfico como parte de su carrera. Aquí es donde conoció a su primera gran influencia, que también pasó a ser el profesor de este curso, Hans-Rudolf Lutz.</p>
+            </article>
+        </main>
+    </body>
+</html>
